@@ -34,8 +34,7 @@ namespace Teltonika.Repository
 
         public DataModelList CsvDeserializer(DataModelList dataModelList)
         {
-            List<DataModel> data = new List<DataModel>();
-            int i = 0;
+            List<DataModel> data = new List<DataModel>();            
             using (StreamReader r = new StreamReader("2019-08.csv"))
             {
                 while (!r.EndOfStream)
