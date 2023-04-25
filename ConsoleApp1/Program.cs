@@ -11,11 +11,14 @@ namespace ConsoleApp1
         {
             FileSerializer serializer = new FileSerializer();
             Console.WriteLine("Hello World!");
-            DataModelList dataModel = new DataModelList();            
+            DataModelList dataModel = new DataModelList();
+            GpsDataProcessing gpsDataProcessing = new GpsDataProcessing();
+            HistogramDataProcessing histogramDataProcessing = new HistogramDataProcessing();
             //dataModel = serializer.JsonDeSerializer(dataModel);
             //dataModel = serializer.CsvDeserializer(dataModel);
              dataModel = serializer.BinaryDeserializer(dataModel);
-            // gpsDataProcessing.Fastest100km(dataModel)           
+            // gpsDataProcessing.Fastest100km(dataModel);
+            histogramDataProcessing.HistogramSpeeds(dataModel);
           
 
            /* foreach (DataModel dataModelItem in dataModel.DataModels)
@@ -24,8 +27,7 @@ namespace ConsoleApp1
             }*/
             
 
-            Console.WriteLine("check ");
-            Console.WriteLine("Commit");
+            Console.WriteLine("check yourself before you wreck yourself");
 
         }
     }

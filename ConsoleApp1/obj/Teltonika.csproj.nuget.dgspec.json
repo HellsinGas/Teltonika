@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj": {}
+    "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj": {
+    "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
+        "projectUniqueName": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
         "projectName": "Teltonika",
-        "projectPath": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
+        "projectPath": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
         "packagesPath": "C:\\Users\\HellsinGas\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
