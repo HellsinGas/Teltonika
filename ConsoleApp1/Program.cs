@@ -19,7 +19,7 @@ namespace ConsoleApp1
              dataModel = serializer.BinaryDeserializer(dataModel);
             // gpsDataProcessing.Fastest100km(dataModel);
             histogramDataProcessing.HistogramSatellites(dataModel);
-           // histogramDataProcessing.HistogramSpeeds(dataModel);
+            histogramDataProcessing.HistogramSpeeds(dataModel);
           
 
            /* foreach (DataModel dataModelItem in dataModel.DataModels)
