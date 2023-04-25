@@ -25,6 +25,7 @@ namespace ConsoleApp1
             
 
             Console.WriteLine("check ");
+            Console.WriteLine("Commit");
 
         }
     }
