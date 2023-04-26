@@ -14,11 +14,48 @@ namespace Teltonika.Repository
 {
     public class FileSerializer
     {
-        public DataModelList JsonDeSerializer(DataModelList dataModelList)
+        public DataModelList SelectFile(DataModelList dataModelList)
         {
-            // DataModel dataModel = new DataModel();
+            /*File paths for testing purposes:
+            E:\Downloads\C# uzduotis\C# uzduotis\2019-08.csv
+            E:\Downloads\C# uzduotis\C# uzduotis\2019-07.json
+            E:\Downloads\C# uzduotis\C# uzduotis\2019-09.bin
+            */
+
+            Console.WriteLine("Please enter a file path:");
+            Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduotis\\2019-09.bin ");
+            Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduotis\\2019-07.json");
+            Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduoti\\2019-08.csv");
+            string filePath = Console.ReadLine();
+
+            try
+            {
+                File.Exists(filePath);            
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error reading file: {ex.Message}");
+            }
+            if (filePath.Contains(".bin"))
+            {
+                return dataModelList = BinaryDeserializer(dataModelList, filePath);
+            }
+            else if (filePath.Contains(".csv"))
+            {
+                return dataModelList = CsvDeserializer(dataModelList, filePath);
+            }
+            else if (filePath.Contains(".json"))
+            {
+                return dataModelList = JsonDeSerializer(dataModelList, filePath);
+            }
+            else { Console.WriteLine("Unsupported file format");
+                return null; }
+            
+        }
+        public DataModelList JsonDeSerializer(DataModelList dataModelList, string filePath)
+        {
             List<DataModel> dataModels = new List<DataModel>();
-            using (StreamReader r = new StreamReader("2019-07.json"))
+            using (StreamReader r = new StreamReader(filePath))
             {
                 string json = r.ReadToEnd();
                 dataModels = JsonSerializer.Deserialize<List<DataModel>>(json);
@@ -32,10 +69,10 @@ namespace Teltonika.Repository
             return dataModelList;
         }
 
-        public DataModelList CsvDeserializer(DataModelList dataModelList)
+        public DataModelList CsvDeserializer(DataModelList dataModelList, string filePath)
         {
             List<DataModel> data = new List<DataModel>();            
-            using (StreamReader r = new StreamReader("2019-08.csv"))
+            using (StreamReader r = new StreamReader(filePath))
             {
                 while (!r.EndOfStream)
                 {
@@ -63,10 +100,10 @@ namespace Teltonika.Repository
             return dataModelList;
         }
 
-        public DataModelList BinaryDeserializer(DataModelList dataModelList)
+        public DataModelList BinaryDeserializer(DataModelList dataModelList,string filePath)
         {
             List<DataModel> data = new List<DataModel>();
-            using (FileStream fileStream = new FileStream("2019-09.bin", FileMode.Open))
+            using (FileStream fileStream = new FileStream(filePath, FileMode.Open))
             {
                 
                 using (BinaryReader reader = new BinaryReader(fileStream, Encoding.BigEndianUnicode))

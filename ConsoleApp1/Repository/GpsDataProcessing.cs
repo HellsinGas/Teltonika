@@ -25,11 +25,10 @@ namespace Teltonika.Repository
                 {
                     for (int j = i; j < dataModelList.DataModels.Count; j++)
                     {
-                        double distance = CalculateDistance(model, dataModelList.DataModels[j]);
-                        //distance = distance * 6;
+                        double distance = CalculateDistance(model, dataModelList.DataModels[j]);                        
                         if (distance >= 100)
                         {
-                            var tuple = new Tuple<DataModel, DataModel>(origin, destination);
+                            var tuple = new Tuple<DataModel, DataModel>(model, dataModelList.DataModels[j]);
                             tupleList.Add(tuple);
                         }
                         else if (distance >= max)
@@ -50,8 +49,7 @@ namespace Teltonika.Repository
             else
             {
                 DistanceOver100NotFound(origin, destination);
-            }
-           // Console.WriteLine("test");
+            }           
         }
 
         private void DistanceOver100NotFound(DataModel origin, DataModel destination)

@@ -11,7 +11,7 @@ namespace Teltonika.Models
 {
     public class DataModelList
     {
-        [JsonPropertyName("DataModels")]
+        
         public List<DataModel> DataModels { get; set; }
 
         public DataModelList()
