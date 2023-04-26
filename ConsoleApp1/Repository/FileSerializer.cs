@@ -14,13 +14,14 @@ namespace Teltonika.Repository
 {
     public class FileSerializer
     {
-        public DataModelList SelectFile(DataModelList dataModelList)
-        {
-            /*File paths for testing purposes:
+        /*File paths for testing purposes:
             E:\Downloads\C# uzduotis\C# uzduotis\2019-08.csv
             E:\Downloads\C# uzduotis\C# uzduotis\2019-07.json
             E:\Downloads\C# uzduotis\C# uzduotis\2019-09.bin
             */
+        public DataModelList SelectFile(DataModelList dataModelList)
+        {
+            
 
             Console.WriteLine("Please enter a file path:");
             Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduotis\\2019-09.bin ");
@@ -36,15 +37,15 @@ namespace Teltonika.Repository
             {
                 Console.WriteLine($"Error reading file: {ex.Message}");
             }
-            if (filePath.Contains(".bin"))
+            if (filePath.Contains(".bin") && File.Exists(filePath))
             {
                 return dataModelList = BinaryDeserializer(dataModelList, filePath);
             }
-            else if (filePath.Contains(".csv"))
+            else if (filePath.Contains(".csv") && File.Exists(filePath))
             {
                 return dataModelList = CsvDeserializer(dataModelList, filePath);
             }
-            else if (filePath.Contains(".json"))
+            else if (filePath.Contains(".json") && File.Exists(filePath))
             {
                 return dataModelList = JsonDeSerializer(dataModelList, filePath);
             }

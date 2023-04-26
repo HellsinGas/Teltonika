@@ -58,7 +58,7 @@ namespace Teltonika.Repository
             Console.WriteLine("Longest section of the road inside provided dataset:");
             Console.WriteLine($"Origin point: Latitude :{origin.Latitude} Longitude : {origin.Longitude}");
             Console.WriteLine($"Destination point: Latitude:{destination.Latitude} Longitude:{destination.Longitude}");
-            Console.WriteLine($"Distance Traveled {GeoCalculator.GetDistance(origin.Latitude,origin.Longitude,destination.Latitude,destination.Longitude) * 1.609344}");
+            Console.WriteLine($"Distance Traveled {GeoCalculator.GetDistance(origin.Latitude,origin.Longitude,destination.Latitude,destination.Longitude) * 1.609344}");            
         }
 
         private void DistanceOver100Found(List<Tuple<DataModel, DataModel>> tupleList)
@@ -104,6 +104,7 @@ namespace Teltonika.Repository
         {
             double distance;
             distance = GeoCalculator.GetDistance(origin.Latitude, origin.Longitude, destination.Latitude, destination.Longitude, 1);
+            //Converting miles to kilometers before returning
             return distance * 1.609344;           
         }
     }

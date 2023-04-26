@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QG4RULyF35vlqerZap6Z57/BPfC1jtMM0yDlM2HtJlIER2B3iifMP5O22uSkHzZZ649bQeIXFNa6m7RpE6q9hQ==",
+  "dgSpecHash": "uzz5CFC3M2REjmfvrCXAmuvX7MZ1422NCGHk02wxWNz+jmMMNXYTuQUnO9+52ZTXQ5A7jNBatoP8JccZKOHKew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
+  "projectFilePath": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HellsinGas\\.nuget\\packages\\geolocation.netstandard\\1.1.1\\geolocation.netstandard.1.1.1.nupkg.sha512",
     "C:\\Users\\HellsinGas\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

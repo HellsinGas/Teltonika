@@ -4593,11 +4593,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
+      "projectUniqueName": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
       "projectName": "Teltonika",
-      "projectPath": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
+      "projectPath": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\Teltonika.csproj",
       "packagesPath": "C:\\Users\\HellsinGas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HellsinGas\\source\\repos\\Teltonika\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\GitHub\\Teltonika\\Teltonika\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

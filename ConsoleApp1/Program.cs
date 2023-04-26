@@ -21,10 +21,7 @@ namespace ConsoleApp1
             {
                 int input = menu.MainMenu();
                 if (input == 1)
-                {
-                    //dataModel = serializer.JsonDeSerializer(dataModel);
-                    //dataModel = serializer.CsvDeserializer(dataModel);
-                    //dataModel = serializer.BinaryDeserializer(dataModel);
+                {                    
                     serializer.SelectFile(dataModel);
                 }
                 if (input == 2)
