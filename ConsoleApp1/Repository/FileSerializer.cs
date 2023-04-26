@@ -24,9 +24,7 @@ namespace Teltonika.Repository
             
 
             Console.WriteLine("Please enter a file path:");
-            Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduotis\\2019-09.bin ");
-            Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduotis\\2019-07.json");
-            Console.WriteLine("Path Examples: E:\\Downloads\\C# užduotis\\C# užduoti\\2019-08.csv");
+            Console.WriteLine("Path Example: E:\\Downloads\\C# užduotis\\C# užduotis\\2019-09.bin ");            
             string filePath = Console.ReadLine();
 
             try
